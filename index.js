@@ -31,8 +31,13 @@ console.log(c);
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
-
+function dogCal(age) {
+    var age = prompt("What is your age")
+    const dog = 7;
+    var dogAge = age * dog;
+    console.log(dogAge);
+}
+dogCal();
 
 
 
@@ -53,11 +58,38 @@ console.log(c);
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-
-
-
-
-
+function dogFeed(weight, age) {
+    var weight = prompt("What is your dogs weight?")
+    var year = prompt("What is the age of your dog?")
+    var feed = 0;
+    if (year >= 1) {
+        if (weight > 15) {
+            feed = weight * .02;
+        }
+        if (weight <= 15) {
+            feed = weight * .03;
+        }
+        if (weight <= 10) {
+            feed = weight * .04;
+        }
+        if (weight <= 5) {
+            feed = weight * .05;
+        }
+    }
+    if (year < 1) {
+        if (year <= .99) {
+            feed = weight * .04;
+        }
+        if (year <= .5833) {
+            feed = weight * .05;
+        }
+        if (year <= .33) {
+            feed = weight * .1;
+        }
+    }
+    console.log("You should feed your dod ", feed, " lbs of dog food.")
+}
+dogFeed();
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
