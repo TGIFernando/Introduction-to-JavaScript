@@ -65,27 +65,23 @@ function dogFeed(weight, age) {
     if (year >= 1) {
         if (weight > 15) {
             feed = weight * .02;
-        }
-        if (weight <= 15) {
+        } else if (weight <= 15) {
             feed = weight * .03;
-        }
-        if (weight <= 10) {
+        } else if (weight <= 10) {
             feed = weight * .04;
-        }
-        if (weight <= 5) {
+        } else if (weight <= 5) {
             feed = weight * .05;
         }
-    }
-    if (year < 1) {
+    } else if (year < 1) {
         if (year <= .99) {
             feed = weight * .04;
-        }
-        if (year <= .5833) {
+        } else if (year <= .5833) {
             feed = weight * .05;
-        }
-        if (year <= .33) {
+        } else if (year <= .33) {
             feed = weight * .1;
         }
+    } else {
+        console.log("Invalid input")
     }
     console.log("You should feed your dod ", feed, " lbs of dog food.")
 }
@@ -101,35 +97,25 @@ var compc = Math.floor((Math.random() * 3) + 1);
 if (usrc == 1) {
     if (compc == 1) {
         console.log("You tied with the computer")
-    }
-    if (compc == 2) {
+    } else if (compc == 2) {
         console.log("You Lost")
-    }
-    if (compc == 3) {
+    } else if (compc == 3) {
         console.log("You Won!")
     }
-}
-
-if (usrc == 2) {
+} else if (usrc == 2) {
     if (compc == 1) {
         console.log("You Won!")
-    }
-    if (compc == 2) {
+    } else if (compc == 2) {
         console.log("You tied with the computer")
-    }
-    if (compc == 3) {
+    } else if (compc == 3) {
         console.log("You Lost")
     }
-}
-
-if (usrc == 3) {
+} else if (usrc == 3) {
     if (compc == 1) {
         console.log("You Lost")
-    }
-    if (compc == 2) {
+    } else if (compc == 2) {
         console.log("You Won!")
-    }
-    if (compc == 3) {
+    } else if (compc == 3) {
         console.log("You tied with the computer")
     }
 } else {
@@ -149,8 +135,8 @@ console.log(cent, "Centimeters");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-for (var i = 99; i < 0; i--) {
-    console.log(i, ' bottles of soda on the wall, ', i, 'bottles of soda, take one down pass it around ', i--, ' bottles of soda on the wall')
+for (var i = 99; i > 0; i--) {
+    console.log(i, ' bottles of soda on the wall, ', i, ' bottles of soda, take one down pass it around ', i - 1, ' bottles of soda on the wall')
 }
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -160,8 +146,20 @@ for (var i = 99; i < 0; i--) {
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-
-
+var grade = prompt("Enter final grade");
+if (grade >= 90) {
+    console.log('A');
+} else if (grade >= 80) {
+    console.log('B')
+} else if (grade >= 70) {
+    console.log('C')
+} else if (grade >= 60) {
+    console.log('D')
+} else if (grade <= 59) {
+    console.log('F')
+} else {
+    console.log("Invalid Input")
+}
 
 
 
