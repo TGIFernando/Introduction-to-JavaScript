@@ -96,33 +96,62 @@ dogFeed();
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
+var usrc = prompt("1 for Rock, 2 for Paper, or 3 for Sissors?");
+var compc = Math.floor((Math.random() * 3) + 1);
+if (usrc == 1) {
+    if (compc == 1) {
+        console.log("You tied with the computer")
+    }
+    if (compc == 2) {
+        console.log("You Lost")
+    }
+    if (compc == 3) {
+        console.log("You Won!")
+    }
+}
 
+if (usrc == 2) {
+    if (compc == 1) {
+        console.log("You Won!")
+    }
+    if (compc == 2) {
+        console.log("You tied with the computer")
+    }
+    if (compc == 3) {
+        console.log("You Lost")
+    }
+}
 
-
-
+if (usrc == 3) {
+    if (compc == 1) {
+        console.log("You Lost")
+    }
+    if (compc == 2) {
+        console.log("You Won!")
+    }
+    if (compc == 3) {
+        console.log("You tied with the computer")
+    }
+} else {
+    console.log("Invalid Input")
+}
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
-
-
-
-
+var km = prompt("input a value to turn KM into Miles");
+var miles = km * .621371;
+console.log(miles, "Miles");
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-
-
-
-
-
+var feet = prompt("Input a value to turn Feet into Centimeters")
+var cent = feet * 30.48;
+console.log(cent, "Centimeters");
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-
-
-
-
-
+for (var i = 99; i < 0; i--) {
+    console.log(i, ' bottles of soda on the wall, ', i, 'bottles of soda, take one down pass it around ', i--, ' bottles of soda on the wall')
+}
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
